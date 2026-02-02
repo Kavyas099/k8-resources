@@ -1,5 +1,4 @@
+kind: nameSpace
 apiVersion: v1
-kind : nameSpace
 metadata:
-  name: expense
-  
+  name: namespace
