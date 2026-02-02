@@ -1,33 +1,26 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: nginx-lb
+  name: kavyaa
 spec:
   type: LoadBalancer
-  selector: # labels are used as selectors
-    project: expense
-    component: backend
-    environment: dev
-    version: "1.0.0"
-    demo: lb
+  selector:
+    kavya: divya
   ports:
   - protocol: TCP
-    port: 80 # service port
-    targetPort: 80
-    nodePort: 30007
+    port: 80
+    targetPort: 8080
+    nodePort: 3007
+
 ---
+
 kind: Pod
 apiVersion: v1
 metadata:
-  name: backend-lb
+  name: podss
   labels:
-    project: expense
-    component: backend
-    environment: dev
-    version: "1.0.0"
-    demo: lb
+    kavya: divya
 spec:
   containers:
-  - name: nginx
+  - name: nginx 
     image: nginx
-    
