@@ -1,13 +1,12 @@
 kind: Pod
 apiVersion: v1
-metadata: 
-  name: labels
+metadata:
+  name: labelss
+  namespace: kavya
   labels:
-    project: expense
-    environment: dev
-    component: backend
-  spec:
-    containers:
-    - name: nginx
-      image: nginx
-      
+    proect: expense
+    env: dev
+spec:
+  containers:
+  - name: nginx
+    image: nginx
