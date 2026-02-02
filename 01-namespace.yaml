@@ -1,4 +1,4 @@
-kind: nameSpace
+kind: namespace
 apiVersion: v1
 metadata:
   name: namespace
