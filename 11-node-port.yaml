@@ -2,6 +2,8 @@ kind: Service
 apiVersion: v1
 metadata:
   name: demo
+spec:
+  type: NodePort
   selector:
     app: kavya
     demo: public
