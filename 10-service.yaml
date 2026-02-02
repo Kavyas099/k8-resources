@@ -17,10 +17,10 @@ spec:
 kind: Pod
 apiVersion: v1
 metadata:
-  name: pod
+  name: podss
   labels:
     project: expense
-    env: dev
+    env: devss
 spec:
   containers:
   - name: nginx
