@@ -1,0 +1,22 @@
+kind: Replicaset
+apiVersion: apps/v1
+metadata:
+  name: Rrss
+  labels:
+    app: frontend
+    env: dev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+      env: dev
+  template:
+    metadata:
+      labels:
+        app: frontend
+        env: dev
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
