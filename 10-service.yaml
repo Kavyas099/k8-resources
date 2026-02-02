@@ -4,8 +4,8 @@ metadata:
   name: svc-yaml
 spec:
   selector:
-    prject: expense
-    env: dev
+    project: expense
+    env: devss
   ports:
     - protocol: TCP
       port: 80
