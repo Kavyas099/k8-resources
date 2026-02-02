@@ -1,7 +1,7 @@
 kind: ReplicaSet
 apiVersion: apps/v1
 metadata:
-  name: Rrss
+  name: nginxx
   labels:
     app: frontend
     env: dev
