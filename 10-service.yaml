@@ -1,29 +1,28 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: nginx
+  name: svc-yaml
 spec:
   selector:
-    project: expense
-    environment: dev
-    component: project
+    prject: expense
+    env: dev
   ports:
-  - protocol: TCP
-    port: 80 # service port
-    targetPort: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
 
 ---
 
 kind: Pod
 apiVersion: v1
-metadata: 
+metadata:
   name: pod
   labels:
     project: expense
-    environment: dev
-    component: project
+    env: dev
 spec:
   containers:
   - name: nginx
     image: nginx
-    
+
