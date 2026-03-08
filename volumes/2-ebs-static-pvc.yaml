@@ -40,7 +40,7 @@ apiVersion: v1
 metadata:
   name: svc-pe
 spec:
-  type: loadBalacer
+  type: LoadBalancer
   selector:
     purpose: "ebs-static-demo"
   ports:
