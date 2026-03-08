@@ -1,0 +1,21 @@
+kind: statefulSet
+apiVersion: apps/v1
+metadata:
+  name: statefulSet
+  selector:
+    matchLabels:
+      proect: rovob
+      env: qa
+    replicas: 3
+    template:
+      metadata:
+        labels:
+          proect: rovob
+          env: qa
+      spec:
+      containers:
+      - name: nginx
+        image: nginx
+     volumeMounts:
+        - name: mysql-storage
+          mountPath: /var/lib/mysql

@@ -1,26 +1,28 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: demo
+  name: node-port
 spec:
-  type: NodePort
+  type: nodePort
   selector:
-    app: kavya
-    demo: public
+    project: expense
+    env: dev
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 8070
+    targetPort: 80
+
+
 ---
 
 kind: Pod
 apiVersion: v1
 metadata:
-  name: podsapace
+  name: pod-ebnv
   labels:
-    app: kavya
-    demo: public
+    project: expense
+    env: dev
 spec:
   containers:
-  - name: nginx 
+  - name: nginx
     image: nginx

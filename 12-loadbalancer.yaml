@@ -1,26 +1,15 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: kavyaa
+  name: ld
 spec:
-  type: LoadBalancer
-  selector:
-    kavya: divya
+  type: load-balancer
+  selector: 
+    app: env
+    proect: expense
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 80
-    nodePort: 30006
-
----
-
-kind: Pod
-apiVersion: v1
-metadata:
-  name: podss
-  labels:
-    kavya: divya
-spec:
-  containers:
-  - name: nginx 
-    image: nginx
+    targetPort: 8080
+    nodePort: 32676
+  

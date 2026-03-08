@@ -1,0 +1,6 @@
+kind: PersistentVolumeclaim
+apiVersion: v1
+metadata:
+  name: ebs-dynamic
+spec:
+  
