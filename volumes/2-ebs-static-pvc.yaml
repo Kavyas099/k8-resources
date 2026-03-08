@@ -36,7 +36,7 @@ spec:
 ---
 
 kind: Service
-apiVersion: apps/v1
+apiVersion: V1
 metadata:
   name: svc-pe
 spec:
